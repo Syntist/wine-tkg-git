@@ -1,4 +1,4 @@
-name: Proton nopackage Arch Linux CI
+name: Proton NTSync nopackage Arch Linux CI
 
 on:
   schedule:
