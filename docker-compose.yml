@@ -1,0 +1,14 @@
+services:
+  proton-tkg:
+    build: ./
+    container_name: proton-tkg-builder
+    volumes:
+      - .:/proton-tkg:rw
+    working_dir: /proton-tkg
+    stdin_open: true
+    tty: true
+    command: bash -c "
+          export CARGO_HOME="$PWD" && \
+          cd proton-tkg && \
+          touch tarplz && \
+          yes|./proton-tkg.sh"
