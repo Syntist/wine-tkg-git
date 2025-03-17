@@ -29,7 +29,7 @@ jobs:
           sudo -u user bash -c "
             cd ~
             git clone https://aur.archlinux.org/ntsync-header.git
-            cd ntsync-header
+            cd ntsync
             makepkg -si --noconfirm
           "
 
