@@ -8,6 +8,7 @@ services:
     stdin_open: true
     tty: true
     command: bash -c "
+          paru -Syu --noconfirm && \
           export CARGO_HOME="$PWD" && \
           cd proton-tkg && \
           touch tarplz && \
