@@ -6,7 +6,7 @@ USER root
 RUN echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist\n" >> /etc/pacman.conf
 
 # Install dependencies
-RUN pacman -Syu --noconfirm base-devel sudo lib32-jack2 git curl bash ccache && \
+RUN pacman -Syu --noconfirm base-devel sudo lib32-jack2 git curl bash ccache vulkan-headers && \
     pacman -Scc --noconfirm
 
 RUN useradd -m auruser && \
